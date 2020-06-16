@@ -15,6 +15,16 @@ module.exports = {
   overrides: [
     // Add this rules, if you use inline templates inside *.component.ts files
     {
+      files: ['*.component.ts'],
+      parser: '@typescript-eslint/parser',
+      parserOptions: {
+        ecmaVersion: 2020,
+        sourceType: 'module',
+      },
+      plugins: ['@angular-eslint/template'],
+      processor: '@angular-eslint/template/extract-inline-html',
+    },
+    {
       files: ['src/**/*.spec.ts', 'src/**/*.d.ts'],
       parserOptions: {
         project: './src/tsconfig.spec.json',
@@ -28,21 +38,6 @@ module.exports = {
       rules: {
         '@typescript-eslint/no-unused-vars': 'off',
       },
-    },
-    {
-      files: ['*.ts'],
-      extends: [
-        // AirBnB Styleguide rules
-        'airbnb-typescript/base',
-        // Settings for Prettier
-        'prettier/@typescript-eslint',
-        'plugin:prettier/recommended',
-      ],
-      parser: '@typescript-eslint/parser',
-      parserOptions: {
-        ecmaVersion: 2020,
-        sourceType: 'module',
-      },
-    },
+    }
   ],
 };
