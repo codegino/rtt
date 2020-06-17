@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'personal';
+  asdfasdfasdfasdf = {
+    aasdfasdfasdfasdfdf: 1,
+    sdafasdfasdfasdfasdfasdfasdfasdfasdasdfasd: 1,
+    asdfasdfasdfsafd: 2,
+  };
 }
