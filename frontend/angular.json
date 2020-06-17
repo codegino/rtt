@@ -23,13 +23,8 @@
             "polyfills": "projects/personal/src/polyfills.ts",
             "tsConfig": "projects/personal/tsconfig.app.json",
             "aot": true,
-            "assets": [
-              "projects/personal/src/favicon.ico",
-              "projects/personal/src/assets"
-            ],
-            "styles": [
-              "projects/personal/src/styles.scss"
-            ],
+            "assets": ["projects/personal/src/favicon.ico", "projects/personal/src/assets"],
+            "styles": ["projects/personal/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -60,6 +55,14 @@
                   "maximumError": "10kb"
                 }
               ]
+            },
+            "hmr": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/personal/src/environments/environment.ts",
+                  "with": "projects/personal/src/environments/environment.hmr.ts"
+                }
+              ]
             }
           }
         },
@@ -71,6 +74,10 @@
           "configurations": {
             "production": {
               "browserTarget": "personal:build:production"
+            },
+            "hmr": {
+              "hmr": true,
+              "browserTarget": "personal:build:hmr"
             }
           }
         },
@@ -87,13 +94,8 @@
             "polyfills": "projects/personal/src/polyfills.ts",
             "tsConfig": "projects/personal/tsconfig.spec.json",
             "karmaConfig": "projects/personal/karma.conf.js",
-            "assets": [
-              "projects/personal/src/favicon.ico",
-              "projects/personal/src/assets"
-            ],
-            "styles": [
-              "projects/personal/src/styles.scss"
-            ],
+            "assets": ["projects/personal/src/favicon.ico", "projects/personal/src/assets"],
+            "styles": ["projects/personal/src/styles.scss"],
             "scripts": []
           }
         },
@@ -106,9 +108,7 @@
               "projects/personal/tsconfig.spec.json",
               "projects/personal/e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {

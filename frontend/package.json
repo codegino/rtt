@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve -o",
     "build": "ng build",
+    "dev": "ng serve --configuration hmr -o",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -42,6 +43,7 @@
     "@angular-eslint/template-parser": "0.0.1-alpha.32",
     "@angular/cli": "~9.1.8",
     "@angular/compiler-cli": "~9.1.11",
+    "@angularclass/hmr": "^2.1.3",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
